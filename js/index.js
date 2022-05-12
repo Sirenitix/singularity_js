@@ -159,3 +159,105 @@
 
 // var book = new Book("The Great Gatsby");
 // console.log(book.getUpperName());
+
+
+
+
+// function isValid(date) {
+//   let isValidDate = Date.parse(date);
+//   if (isNaN(isValidDate)) {
+//     return false
+//   }
+//   else{
+//     return true
+//   }
+// }
+
+// function isAfter(date, date2) {
+//   if(date > date2){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// function isBefore(date, date2) {
+//   if(date < date2){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// function isFuture(date) {
+//   if(date > new Date()){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// function isPast(date) {
+//   if(date < new Date()){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+
+// let date = new Date();
+// let date2 = new Date("");
+
+// console.log(isValid(date)); //true
+// console.log(isValid(date2)); //false
+// console.log(date)
+
+
+// let is = {};
+// is.num = (arg) => typeof arg === "number" ?  true : false;
+// is.nan = (arg) => Number.isNaN(arg) ?  true : false;
+// is.str = (arg) => typeof arg === "string" ?  true : false;
+// is.bool = (arg) => typeof arg === "boolean" ?  true : false;
+// is.undef = (arg) => typeof arg === "undefined" ?  true : false;
+// is.arr = (arg) => Array.isArray(arg)  ?  true : false;
+// is.obj = (arg) => typeof arg === "object"  ?  true : false;
+// is.fun = (arg) => typeof arg === "function" ?  true : false;
+// is.truthy = (arg) => arg ?  true : false;
+// is.falsy = (arg) => arg ?  false : true;
+
+// console.log(is.truthy("🍀"));
+// console.log(is.truthy(0)); // false
+
+// console.log(is.falsy(0)); // true
+
+// console.log(is.fun(() => {})); //true
+// console.log(is.fun({})); //false
+
+// console.log(is.num(NaN)); //true
+
+// console.log(is.nan(NaN)); //true
+
+
+// function Car(speed, brand) {
+//   this.speed = speed;
+//   this.brand = brand;
+
+//   this.status = function () {
+//     return this.brand + " running at " + this.speed + " km/h";
+//   };
+
+//   this.accelerate = function(value){
+//     this.speed = this.speed + value
+//   }
+
+//   this.brake = function(value){
+//     this.speed = this.speed - value
+//   }
+// }
+
+// let car = new Car(0, "Lada");
+// car.accelerate(20);
+// console.log(car.status()); // Lada running at 20 km/h
+// car.brake(5);
+// console.log(car.status()); // Lada running at 15 km/h
