@@ -261,3 +261,84 @@
 // console.log(car.status()); // Lada running at 20 km/h
 // car.brake(5);
 // console.log(car.status()); // Lada running at 15 km/h
+
+
+// const forEach = (array, func) => {
+//   for (let i = 0; i < array.length; i++) {
+//     func(array[i])
+//   }
+  
+// }
+
+// const displayMethods = (obj) => {
+//   return  Object.getOwnPropertyNames(obj).filter(item => typeof obj[item] === 'function')
+//  }
+
+// const citiesOnly = (obj) => {
+//   let cities = []
+//   for (let i = 0; i < obj.length; i++) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//         if(key === "city"){
+//           cities.push(value)
+//         }
+//     }
+//   }
+//   return cities;
+// }
+
+
+// const tempForecasts = (arr) => {
+//   const resArr = [];
+//   const temps = farToCelc(arr);
+//   for(let i = 0; i<arr.length; i++){
+//       resArr.push(`${temps[i]}°Celsius in ${arr[i].city}, ${capitalize(arr[i].state)}`)
+//   }
+//    return resArr;
+// }
+
+// const farToCelc = (arr) => {
+//    const temps = [];
+//    for(let i = 0; i<arr.length; i++){
+//       temps.push(Math.floor((parseInt(arr[i].temperature) - 32) * 5/9));
+//   } 
+//   return temps;
+// }
+
+// const capitalize = (string) => {
+//   return string.replace(/\b\w/g, char => char.toUpperCase())
+// } //P.S thx for Ilyas
+ 
+
+// const hasOddNumber = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 !== 0){
+//       return true
+//     }
+//   }
+//   return false;
+// }
+
+
+// const adder = (arr, result) => {
+//   let sum = 0;
+//   if(result){
+//     for (let i = result; i < arr.length; i++) {
+//       sum +=arr[i]
+//     }
+//   }else {
+//     for (let i = 0; i < arr.length; i++) {
+//       sum +=arr[i]
+//     }
+//   }
+//   return sum
+// }
+
+// const isEqual2 = (firstObj, secondObj) => {
+//   if(JSON.stringify(firstObj) === JSON.stringify(secondObj)){
+//     return true
+//   }else {
+//     return false
+//   }
+// };
+
+
