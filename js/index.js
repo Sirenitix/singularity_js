@@ -267,7 +267,7 @@
 //   for (let i = 0; i < array.length; i++) {
 //     func(array[i])
 //   }
-  
+
 // }
 
 // const displayMethods = (obj) => {
@@ -300,14 +300,14 @@
 //    const temps = [];
 //    for(let i = 0; i<arr.length; i++){
 //       temps.push(Math.floor((parseInt(arr[i].temperature) - 32) * 5/9));
-//   } 
+//   }
 //   return temps;
 // }
 
 // const capitalize = (string) => {
 //   return string.replace(/\b\w/g, char => char.toUpperCase())
 // } //P.S thx for Ilyas
- 
+
 
 // const hasOddNumber = (arr) => {
 //   for (let i = 0; i < arr.length; i++) {
@@ -342,3 +342,46 @@
 // };
 
 
+// const sumOrMul = (arr, result) => {
+//   if(!result){
+//       result = 0
+//   }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr [i] % 2 !== 0) {
+//       result = arr[i] + result
+//     } else {
+//       result = arr[i] * result
+//     }
+//     console.log(result)
+//   }
+
+//   return result
+// };
+
+// console.log(sumOrMul([1, 2, 3, 5, 8], 5))
+
+
+// const isEmpty = (object) => {
+//   let counter = 0
+//   console.log(object)
+//   if(Object.entries(object).length === 0){
+//     return true
+//   }
+
+//   for (const [key, value] of Object.entries(object)) {
+//           if(typeof value !== "undefined"){
+//             counter++
+//           }
+//   }
+//   if(counter > 0){
+//     return false
+//   }else{
+//     return true
+//   }
+//  return false
+// }
+
+// console.log(isEmpty({})); //true
+// console.log(isEmpty({ a: undefined })); //true,
+// console.log(isEmpty({ a: 1 })); //false
+// console.log(isEmpty({ a: 1, b: undefined }))
