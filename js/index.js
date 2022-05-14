@@ -261,6 +261,243 @@
 // console.log(car.status()); // Lada running at 20 km/h
 // car.brake(5);
 // console.log(car.status()); // Lada running at 15 km/h
+// const forEach = (array, func) => {
+//   for (let i = 0; i < array.length; i++) {
+//     func(array[i])
+//   }
+//
+// }
+//
+// let arr = [1, 2, 3];
+//
+// function log(a) {
+//   console.log(a);
+// }
+//
+// forEach(arr, log);
+
+//
+// const displayMethods = (obj) => {
+//   return  Object.getOwnPropertyNames(obj).filter(item => typeof obj[item] === 'function')
+// }
+//
+// console.log(displayMethods(new Array()));
+
+//
+// const citiesOnly = (obj) => {
+//   let cities = []
+//   for (let i = 0; i < obj.length; i++) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//       if(key === "city"){
+//         cities.push(value)
+//       }
+//     }
+//   }
+//   return cities;
+// }
+//
+// console.log(citiesOnly([
+//   {
+//     city: "Los Angeles",
+//     temperature: "  101 °F   ",
+//   },
+//   {
+//     city: "San Francisco",
+//     temperature: " 84 ° F   ",
+//   },
+// ]) )
+
+// const tempForecasts = (obj) => {
+//   let aboutTemperature = []
+//   let str = ""
+//   let city = ""
+//   for (let i = 0; i < obj.length; i++) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//         if(key === "city"){
+//           city = value
+//         }
+//
+//         if(key === "temperature"){
+//           str = str + fToC(value.match(/\d+/)[0])
+//           // console.log(fToC(value.match(/\d+/)[0]))
+//           str = str + "°Celsius in " + city + ", "
+//         }
+//
+//         if(key === "state"){
+//           const words = value.split(" ");
+//           for (let i = 0; i < words.length; i++) {
+//             words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+//           }
+//
+//           str = str + words
+//         }
+//     }
+//     aboutTemperature.push(str)
+//     str = ""
+//   }
+//
+//   return aboutTemperature;
+// }
+//
+// function fToC(fahrenheit)
+// {
+//   return ""+Math.floor(((parseInt(fahrenheit) - 32) * (5/9)));
+// }
+//
+// const tempForecasts = (obj) => {
+//   let aboutTemperature = []
+//   let str = ""
+//   let city = ""
+//   for (let i = 0; i < obj.length; i++) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//       if(key === "city"){
+//         city = value
+//       }
+//
+//       if(key === "temperature"){
+//         str = str + fToC(parseInt(value+""))
+//         // console.log(fToC(value.match(/\d+/)[0]))
+//         str = str + "°Celsius in " + city + ", "
+//       }
+//
+//       if(key === "state"){
+//         const words = value.split(" ");
+//         for (let i = 0; i < words.length; i++) {
+//           words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+//         }
+//
+//         str = str + words
+//       }
+//     }
+//     aboutTemperature.push(str + ``)
+//     str = ""
+//   }
+//
+//   return aboutTemperature;
+// }
+//
+// function fToC(fahrenheit)
+// {
+//   return Math.floor((5/9) * (parseInt(fahrenheit) - 32));
+// }
+
+// const tempForecasts = (obj) => {
+//   let aboutTemperature = []
+//   let str = ""
+//   let city = ""
+//   for (let i = 0; i < obj.length; i++) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//       if(key === "city"){
+//         city = value
+//       }
+//
+//       if(key === "temperature"){
+//         str = str + fToC(parseInt(value+""))
+//         // console.log(fToC(value.match(/\d+/)[0]))
+//         str = str + "°Celsius in " + city + ", "
+//       }
+//
+//       if(key === "state"){
+//         const words = value.split(" ");
+//         for (let i = 0; i < words.length; i++) {
+//           words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+//         }
+//
+//         str = str + words
+//       }
+//     }
+//     aboutTemperature.push(str + ``)
+//     str = ""
+//   }
+//
+//   return aboutTemperature;
+// }
+//
+// function fToC(fahrenheit)
+// {
+//   return Math.floor((5/9) * (parseInt(fahrenheit) - 32));
+// }
+//
+//
+// console.log(tempForecasts([
+//   { city: 'Los Angeles',
+//     temperature: '101 °F',
+//     state: 'california',
+//     region: 'West' },
+//   { city: 'San Francisco',
+//     temperature: '84 °F',
+//     state: 'california',
+//     region: 'West' },
+//   { city: 'Miami',
+//     temperature: ' 112 °F',
+//     state: 'Florida',
+//     region: 'South' },
+//   { city: 'New York City',
+//     temperature: ' 0 °F',
+//     state: 'new york',
+//     region: 'North East' },
+//   { city: 'Juneau',
+//     temperature: ' 21° F',
+//     state: 'Alaska',
+//     region: 'West' },
+//   { city: 'Boston',
+//     temperature: '45 °F',
+//     state: 'massachussetts',
+//     region: 'North East' },
+//   { city: 'Jackson',
+//     temperature: ' 70°F  ',
+//     state: 'mississippi',
+//     region: 'South' },
+//   { city: 'Utqiagvik',
+//     temperature: ' -1 °F',
+//     state: 'Alaska',
+//     region: 'West' },
+//   { city: 'Albuquerque',
+//     temperature: ' 95 °F',
+//     state: 'new mexico',
+//     region: 'West' }
+// ]) )
+
+//['38°Celsius in Pasadena, California']
+//['38°Celsius in Pasadena, California']
+//38°Celsius in Los Angeles, California,28°Celsius in San Francisco, California,44°Celsius in Miami, Florida,-18°Celsius in New York City, New,York,-7°Celsius in Juneau, Alaska,7°Celsius in Boston, Massachussetts,21°Celsius in Jackson, Mississippi,-19°Celsius in Utqiagvik, Alaska,35°Celsius in Albuquerque, New,Mexico
+//38°Celsius in Los Angeles, California,28°Celsius in San Francisco, California,44°Celsius in Miami, Florida,-18°Celsius in New York City, New York,-7°Celsius in Juneau, Alaska,7°Celsius in Boston, Massachussetts,21°Celsius in Jackson, Mississippi,-19°Celsius in Utqiagvik, Alaska,35°Celsius in Albuquerque, New Mexico
+
+//
+// const hasOddNumber = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 !== 0){
+//       return true
+//     }
+//   }
+//   return false;
+// }
+// hasOddNumber([1, 2, 2, 2, 2, 2, 4])
+// console.log(hasOddNumber([1, 2, 2, 2, 2, 2, 4]))
+// console.log(hasOddNumber([2, 2, 2, 2, 2, 4]))
+
+
+// const adder = (arr, result) => {
+//   let sum = 0;
+//   if(result){
+//     for (let i = result; i < arr.length; i++) {
+//       sum +=arr[i]
+//     }
+//   }else {
+//     for (let i = 0; i < arr.length; i++) {
+//       sum +=arr[i]
+//     }
+//   }
+//   return sum
+// }
+//
+// const isEqual2 = (firstObj, secondObj) => {
+//   if(JSON.stringify(firstObj) === JSON.stringify(secondObj)){
+//     return true
+//   }else {
+//     return false
+//   }
+// };
 
 
 // const forEach = (array, func) => {
@@ -385,3 +622,100 @@
 // console.log(isEmpty({ a: undefined })); //true,
 // console.log(isEmpty({ a: 1 })); //false
 // console.log(isEmpty({ a: 1, b: undefined }))
+
+// function invert(obj) {
+//     for (const [key, value] of Object.entries(obj[i])) {
+//       obj.set
+//   }
+// }
+// function invert(obj) {
+//   let invertObject = {}
+//   for (const [key, value] of Object.entries(obj)) {
+//     invertObject[value] = key
+//   }
+//   return invertObject
+// }
+//
+// console.log(invert({ test: 1 }));
+
+// const zip = (...arguments) => {
+//   let zipObj = {}
+//   for (let i = 0; i < arguments.length; i++) {
+//     for (const [key, value] of Object.entries(arguments[i])) {
+//           if(!Object.keys(zipObj).includes(key)){
+//             zipObj[key] = value
+//           }
+//     }
+//   }
+//   return zipObj
+// }
+//
+// const objects = [
+//   { foo: 5, bar: 6 },
+//   { foo: 13, baz: -1 }, // foo - повторяющийся ключ
+// ];
+//
+// console.log(zip(...objects)); // { foo: 5, bar: 6, baz: -1 }
+//
+// function job() {
+//   return new Promise(function(resolve, reject) {
+//
+//     setTimeout(resolve, 2000);
+//
+//   }).then(() => "hello world");
+//
+// }
+//
+// console.log(job())
+//
+//
+// const job = (data) => {
+//   if(!Number.isInteger(data)){
+//     return new Promise((resolve, reject) => {
+//       reject(new Error())
+//     }).catch(() => new Error())
+//   } else if (data % 2 !== 0){
+//     return new Promise(function(resolve, reject) {
+//
+//       setTimeout(resolve, 1000);
+//
+//     }).then(() => "odd");
+//
+//   }else {
+//     return new Promise(function(resolve, reject) {
+//
+//       setTimeout(resolve, 2000);
+//
+//     }).then(() => "even");
+//   }
+//
+//
+// }
+//
+// console.log(job(2))
+
+//
+// const solution = () => {
+//   for (let i = 0; i < 10; i++) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, 10);
+//   }
+// };
+//
+// console.log(solution())
+
+// const addAsync = (a, b) => {
+//   if(!Number.isInteger(a) || !Number.isInteger(b)){
+//     return new Promise(function(resolve, reject) {
+//       reject(new Error("Must provide two parameters"))
+//     })
+//   }else {
+//     return new Promise(function(resolve, reject) {
+//       resolve(a + b)
+//     })
+//   }
+//   }
+//
+// addAsync(1, 2).then((res) => console.log(res)); // 3
+// addAsync(undefined, 2).catch((e) => console.log(e.message));
