@@ -229,6 +229,15 @@ textarea {
     white-space: pre-wrap !important;
   }
 
+  #main{
+    background:black;
+    position:absolute;
+    height: 100vh;
+    width: 100vh;
+
+  }
+
+
   pre,
   blockquote {
     border: 1px solid #999;

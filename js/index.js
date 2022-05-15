@@ -719,3 +719,45 @@
 //
 // addAsync(1, 2).then((res) => console.log(res)); // 3
 // addAsync(undefined, 2).catch((e) => console.log(e.message));
+
+
+// const timeout = (delay, callback) => {
+//   return function (a, b) {
+//
+//
+//     let p2 = new Promise(function (resolve, reject) {
+//       setTimeout(reject, delay, new Error('timeout'));
+//     }).catch((res) => res.message)
+//
+//
+//     return Promise.race([callback(a,b), p2]).then(function (value) {
+//       return new Promise(function (resolve, reject) {
+//         resolve(value)
+//       }).then((data) => data).catch(
+//         (value) => value
+//       )
+//     })
+//   }
+// }
+//
+//
+// const delayed =
+//   (delay) =>
+//     (...v) =>
+//       new Promise((res) => setTimeout(res, delay, v));
+//
+// timeout(2020, delayed(1000))(2, 3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message))
+//
+// timeout(5, delayed(1000))(2, 3)
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err.message)) //timeout
+//
+// const sum = (a, b) => {
+//   return a + b;
+// };
+//
+// timeout(2000, sum)(2, 3)
+//   .then((res) => console.log(res)) // 5
+//   .catch((err) => console.log(err));
