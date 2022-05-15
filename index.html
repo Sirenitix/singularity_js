@@ -24,16 +24,25 @@
 </head>
 
 <body>
-<div id="main" >
-  <div id="title">TO DO</div>
-  <div></div>
-  <input id = "input"  placeholder="пример купить хлеб">
-  <button id ="button" type="button">Добавить</button>
-    <div id="done"> Done</div>
+<div class="container">
 
+
+  <h3>Todo</h3>
+  <ul id="incomplete-tasks">
+
+  </ul>
+  <p>
+    <label for="new-task">Add todo</label>
+    <input placeholder="пример: купить хлеб" id="new-task" type="text">
+    <br><br><br>
+    <button id="add-button">Добавить</button>
+  </p>
+  <h3>Completed</h3>
+
+  <ul id="completed-tasks">
+
+  </ul>
 </div>
-
-
 </body>
 <script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
